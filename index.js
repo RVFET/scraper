@@ -49,8 +49,8 @@ async function handleAPIRequest({ url, selector, attr, spaced, raw, pretty, rege
 
   try {
     if (regex) {
-      __data = await scraper.getRawHTML();
-      result = __data.match(new RegExp(regex, 'g'));
+      result = await scraper.getRawHTML();
+      result = result.match(new RegExp(regex, 'g'));
       console.log(result);
     } else if (!selector || raw) {
       result = await scraper.getRawHTML();
