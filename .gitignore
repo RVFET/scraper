@@ -1,0 +1,4 @@
+worker/
+dist/
+.wrangler/
+node_modules/
